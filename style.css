@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #222;
+}
+
+.card {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    max-width: 470px;
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.search button img {
+    width: 16px;
+}
+
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.weather h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.humidity,
+.wind {
+    font-size: 28px;
+}
+
+.weather {
+    position: relative;
+    z-index: 2;
+}
+
+.weather-bg {
+    background-image: url('./images/bg.jpg'); /* Default background */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    transition: background-image 0.5s ease-in-out; /* Transition for background image change */
+    animation: changeBackground 20s linear infinite;
+}
+
+.error {
+    text-align: left;
+    margin-left: 30px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
+@keyframes changeBackground {
+    0% {
+        background-position: top left;
+    }
+    25% {
+        background-position: top right;
+        animation-timing-function: ease-in-out; /* Apply easing function */
+    }
+    50% {
+        background-position: bottom right;
+        animation-timing-function: ease-in-out; /* Apply easing function */
+    }
+    75% {
+        background-position: bottom left;
+        animation-timing-function: ease-in-out; /* Apply easing function */
+    }
+    100% {
+        background-position: top left;
+    }
+}
+
+ 
